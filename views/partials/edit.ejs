@@ -1,0 +1,18 @@
+<%- include("header.ejs") %>
+
+<div class="container mt-5">
+  <h2>Edit Post</h2>
+  <form action="/edit/<%= post.slug %>" method="POST">
+    <div class="mb-3">
+      <label>Title</label>
+      <input type="text" name="title" value="<%= post.title %>" class="form-control">
+    </div>
+    <div class="mb-3">
+      <label>Content</label>
+      <textarea name="content" class="form-control" rows="10"><%= post.content %></textarea>
+    </div>
+    <button type="submit" class="btn btn-success">Update Post</button>
+  </form>
+</div>
+
+<%- include("footer.ejs") %>
